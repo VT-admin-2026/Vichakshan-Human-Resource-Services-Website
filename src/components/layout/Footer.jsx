@@ -6,12 +6,10 @@ import {
   FacebookIcon,
   InstagramIcon,
   LinkedinIcon,
-  TwitterIcon,
 } from '../ui/SocialIcons'
 
 const socialIcons = [
   { name: 'LinkedIn', href: companyInfo.social.linkedin, Icon: LinkedinIcon },
-  { name: 'Twitter', href: companyInfo.social.twitter, Icon: TwitterIcon },
   { name: 'Facebook', href: companyInfo.social.facebook, Icon: FacebookIcon },
   { name: 'Instagram', href: companyInfo.social.instagram, Icon: InstagramIcon },
 ]

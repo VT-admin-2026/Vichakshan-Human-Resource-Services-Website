@@ -12,10 +12,9 @@ export const companyInfo = {
     { day: 'Sunday', time: 'Closed' },
   ],
   social: {
-    linkedin: 'https://linkedin.com',
-    twitter: 'https://twitter.com',
-    facebook: 'https://facebook.com',
-    instagram: 'https://instagram.com',
+    linkedin: 'https://www.linkedin.com/company/vichakshan-human-resource-service/',
+    facebook: 'https://www.facebook.com/share/1JLbnXpLjs/',
+    instagram: 'https://www.instagram.com/vichakshan.hr.services?igsh=enF1aWVjcG8zd3Ji',
   },
 }
 
