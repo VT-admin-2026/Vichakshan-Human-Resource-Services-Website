@@ -2,10 +2,17 @@ export const companyInfo = {
   name: 'Vichakshan Human Resource Services',
   shortName: 'Vichakshan',
   tagline: 'Human Resource Solutions | Recruitment | Staffing | Workforce Management',
-  email: 'contact@vichakshanhrs.com',
-  phone: '+91 98765 43210',
-  phoneHref: '+919876543210',
-  address: 'Business Hub, Andheri East, Mumbai, Maharashtra 400069, India',
+  email: 'hr@vichakshan.org',
+  phone: '92409 20292',
+  phoneHref: '+919240920292',
+  whatsapp: '9421671091',
+  whatsappHref: 'https://wa.me/919421671091',
+  address:
+    'Vichakshan Human Resource Services, Shop No. 53, Roongta Shopping Hub, Indira Nagar, Nashik – 422009',
+  location: {
+    lat: 19.978546110965844,
+    lng: 73.7795179995126,
+  },
   hours: [
     { day: 'Monday – Friday', time: '9:00 AM – 6:30 PM' },
     { day: 'Saturday', time: '10:00 AM – 2:00 PM' },

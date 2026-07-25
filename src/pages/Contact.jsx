@@ -11,12 +11,14 @@ import {
   FacebookIcon,
   InstagramIcon,
   LinkedinIcon,
+  WhatsAppIcon,
 } from '../components/ui/SocialIcons'
 
 const socialIcons = [
   { name: 'LinkedIn', href: companyInfo.social.linkedin, Icon: LinkedinIcon },
   { name: 'Facebook', href: companyInfo.social.facebook, Icon: FacebookIcon },
   { name: 'Instagram', href: companyInfo.social.instagram, Icon: InstagramIcon },
+  { name: 'WhatsApp', href: companyInfo.whatsappHref, Icon: WhatsAppIcon },
 ]
 
 const initialForm = {
@@ -156,6 +158,17 @@ export default function Contact() {
                     {companyInfo.phone}
                   </a>
                 </li>
+                <li>
+                  <a
+                    href={companyInfo.whatsappHref}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex gap-3 transition hover:text-primary"
+                  >
+                    <WhatsAppIcon className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                    WhatsApp: {companyInfo.whatsapp}
+                  </a>
+                </li>
               </ul>
 
               <div className="mt-8 border-t border-border pt-8">
@@ -200,20 +213,20 @@ export default function Contact() {
           <SectionHeading
             eyebrow="Location"
             title="Visit our office"
-            description="A Google Maps embed can be connected here. For now, this placeholder marks our business location."
+            description="Find us at Roongta Shopping Hub, Indira Nagar, Nashik."
           />
           <ScrollReveal>
-            <div
-              className="flex min-h-[320px] items-center justify-center overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-surface-muted via-white to-accent-soft"
-              role="img"
-              aria-label="Google Maps placeholder for Vichakshan office location"
-            >
-              <div className="px-6 text-center">
-                <MapPin className="mx-auto mb-4 h-10 w-10 text-primary" />
-                <p className="font-display text-lg font-bold text-ink">Google Maps Placeholder</p>
-                <p className="mt-2 max-w-md text-sm text-ink-muted">{companyInfo.address}</p>
-              </div>
+            <div className="overflow-hidden rounded-2xl border border-border shadow-card">
+              <iframe
+                title="Vichakshan Human Resource Services location"
+                src={`https://www.google.com/maps?q=${companyInfo.location.lat},${companyInfo.location.lng}&z=16&output=embed`}
+                className="h-[320px] w-full border-0 md:h-[420px]"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
             </div>
+            <p className="mt-4 text-center text-sm text-ink-muted">{companyInfo.address}</p>
           </ScrollReveal>
         </div>
       </section>

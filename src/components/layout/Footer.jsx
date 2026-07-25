@@ -6,12 +6,14 @@ import {
   FacebookIcon,
   InstagramIcon,
   LinkedinIcon,
+  WhatsAppIcon,
 } from '../ui/SocialIcons'
 
 const socialIcons = [
   { name: 'LinkedIn', href: companyInfo.social.linkedin, Icon: LinkedinIcon },
   { name: 'Facebook', href: companyInfo.social.facebook, Icon: FacebookIcon },
   { name: 'Instagram', href: companyInfo.social.instagram, Icon: InstagramIcon },
+  { name: 'WhatsApp', href: companyInfo.whatsappHref, Icon: WhatsAppIcon },
 ]
 
 export default function Footer() {
@@ -124,6 +126,17 @@ export default function Footer() {
               >
                 <Phone className="mt-0.5 h-4 w-4 shrink-0 text-accent-sky" />
                 {companyInfo.phone}
+              </a>
+            </li>
+            <li>
+              <a
+                href={companyInfo.whatsappHref}
+                target="_blank"
+                rel="noreferrer"
+                className="flex gap-3 transition hover:text-accent-sky"
+              >
+                <WhatsAppIcon className="mt-0.5 h-4 w-4 shrink-0 text-accent-sky" />
+                WhatsApp: {companyInfo.whatsapp}
               </a>
             </li>
           </ul>

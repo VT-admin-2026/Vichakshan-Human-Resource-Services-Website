@@ -4,6 +4,7 @@ import { useEffect } from 'react'
 import Header from '../components/layout/Header'
 import Footer from '../components/layout/Footer'
 import PageTransition from '../components/ui/PageTransition'
+import WhatsAppFloat from '../components/ui/WhatsAppFloat'
 
 export default function MainLayout() {
   const location = useLocation()
@@ -23,6 +24,7 @@ export default function MainLayout() {
         </AnimatePresence>
       </main>
       <Footer />
+      <WhatsAppFloat />
     </div>
   )
 }
