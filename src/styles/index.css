@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0f4c81;
+  --color-primary-dark: #0a3559;
+  --color-primary-light: #1a6bb0;
+  --color-accent: #0d9488;
+  --color-accent-sky: #38bdf8;
+  --color-accent-soft: #e0f2fe;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f7fafc;
+  --color-surface-muted: #eef4f9;
+  --color-ink: #0f172a;
+  --color-ink-muted: #475569;
+  --color-ink-subtle: #64748b;
+  --color-border: #e2e8f0;
+  --color-border-soft: #f1f5f9;
+
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans", "Manrope", ui-sans-serif, system-ui, sans-serif;
+
+  --shadow-soft: 0 10px 40px -12px rgb(15 76 129 / 0.12);
+  --shadow-card: 0 8px 30px -8px rgb(15 76 129 / 0.1);
+  --shadow-elevated: 0 20px 50px -16px rgb(15 76 129 / 0.18);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-surface font-sans text-ink antialiased;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    @apply bg-primary/15 text-primary-dark;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-accent-sky;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .gradient-hero {
+    background:
+      radial-gradient(ellipse 80% 60% at 85% 15%, rgb(56 189 248 / 0.18), transparent 55%),
+      radial-gradient(ellipse 60% 50% at 10% 80%, rgb(13 148 136 / 0.1), transparent 50%),
+      linear-gradient(165deg, #f8fbff 0%, #eef6fc 45%, #f5fafb 100%);
+  }
+
+  .gradient-cta {
+    background: linear-gradient(135deg, #0f4c81 0%, #0d6e8a 55%, #0d9488 100%);
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, #0f4c81, #0d9488);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
