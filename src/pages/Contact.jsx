@@ -166,7 +166,7 @@ export default function Contact() {
                     className="flex gap-3 transition hover:text-primary"
                   >
                     <WhatsAppIcon className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-                    WhatsApp: {companyInfo.whatsapp}
+                    {companyInfo.whatsapp}
                   </a>
                 </li>
               </ul>
